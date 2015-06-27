@@ -1,0 +1,1 @@
+# linguee-alfred-workflow
