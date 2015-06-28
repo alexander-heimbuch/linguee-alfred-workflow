@@ -1,6 +1,6 @@
 # Alfred Linguee.de Workflow
 
-## German-English/English-German dictionary based on linguee.de
+_Requires installation of [NodeJS](https://nodejs.org/)_
 
 ![Screenshot](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/screenshot.png)
 
