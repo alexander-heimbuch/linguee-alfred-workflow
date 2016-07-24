@@ -51,7 +51,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-/usr/local/bin/node main.js "translate" "$(iconv -f UTF8-MAC &lt;&lt;&lt;'{query}')"</string>
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;'{query}')"</string>
 				<key>title</key>
 				<string>Search linguee for "{query}"</string>
 				<key>type</key>
