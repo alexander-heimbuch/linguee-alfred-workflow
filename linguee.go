@@ -22,6 +22,7 @@ type Request struct {
 
 type Translation struct {
 	Meaning string
+	Href    string
 	Phrase  []string
 }
 
@@ -34,13 +35,32 @@ func main() {
 
 	response := alfred.NewResponse()
 
+	match := false
+
 	for index, translation := range parseTranslations(selection) {
+
+		if strings.ToLower(args.Query) == strings.ToLower(translation.Meaning) {
+			match = true
+		}
+
 		response.AddItem(&alfred.AlfredResponseItem{
 			Valid:    true,
 			Uid:      strconv.Itoa(index),
 			Title:    translation.Meaning,
 			Subtitle: strings.Join(translation.Phrase, ", "),
-			Arg:      fmt.Sprintf("http://www.linguee.de/%s/search?source=auto&query=%s", args.Lang, url.QueryEscape(translation.Meaning)),
+			Arg:      fmt.Sprintf("http://www.linguee.de%s", translation.Href),
+		})
+	}
+
+	// Add query itself to give the ability for a direct search if there is no match
+	if match == false {
+		origin, _ := url.QueryUnescape(args.Query)
+
+		response.AddItem(&alfred.AlfredResponseItem{
+			Valid: true,
+			Uid:   "origin",
+			Title: origin,
+			Arg:   fmt.Sprintf("http://www.linguee.de/deutsch-englisch/search?source=auto&query=%s", url.QueryEscape(args.Query)),
 		})
 	}
 
@@ -95,7 +115,7 @@ func filterDocument(doc *goquery.Document) *goquery.Selection {
 
 func parseTranslations(elements *goquery.Selection) (results []Translation) {
 	elements.Each(func(index int, element *goquery.Selection) {
-		results = append(results, Translation{parseMeaning(element), parsePhrase(element)})
+		results = append(results, Translation{parseMeaning(element), parseHref(element), parsePhrase(element)})
 	})
 
 	return
@@ -103,6 +123,11 @@ func parseTranslations(elements *goquery.Selection) (results []Translation) {
 
 func parseMeaning(selection *goquery.Selection) string {
 	return strings.TrimSpace(selection.Find(".main_item").Text())
+}
+
+func parseHref(selection *goquery.Selection) string {
+	href, _ := selection.Find(".main_item").Attr("href")
+	return href
 }
 
 func parsePhrase(selection *goquery.Selection) (result []string) {
