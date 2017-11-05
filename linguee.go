@@ -60,7 +60,7 @@ func main() {
 			Valid: true,
 			Uid:   "origin",
 			Title: origin,
-			Arg:   fmt.Sprintf("http://www.linguee.de/deutsch-englisch/search?source=auto&query=%s", url.QueryEscape(args.Query)),
+			Arg:   fmt.Sprintf("http://www.linguee.de/%s/search?source=auto&query=%s", args.Lang, url.QueryEscape(args.Query)),
 		})
 	}
 

@@ -5,6 +5,7 @@
 *Functionality*
 
 - Autosuggestion
+- Supports different languages
 - Opens suggestion on linguee.de
 - Supports phrases and umlauts
 
