@@ -13,6 +13,11 @@
 
 [![Download](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/workflow-icon.png)](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/linguee-de-workflow.alfredworkflow)
 
+## Extended Use Cases
+
+- Output `meaning`, `phrase` or `url` (default) as an `{query}`
+- See workflow settings for examples
+
 ## Development
 
 - Checkout in your go source workspace

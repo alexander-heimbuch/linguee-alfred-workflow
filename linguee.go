@@ -17,7 +17,8 @@ import (
 type Request struct {
 	URL   string
 	Lang  string
-	Query string
+  Query string
+  Result string
 }
 
 type Translation struct {
@@ -48,7 +49,7 @@ func main() {
 			Uid:      strconv.Itoa(index),
 			Title:    translation.Meaning,
 			Subtitle: strings.Join(translation.Phrase, ", "),
-			Arg:      fmt.Sprintf("http://www.linguee.de%s", translation.Href),
+			Arg:      result(args, translation),
 		})
 	}
 
@@ -73,13 +74,29 @@ func params(base string, args []string) Request {
 	}
 
 	query := args[1]
-	lang := "deutsch-englisch"
+  lang := "deutsch-englisch"
+  result := "url"
 
 	if len(args) > 2 {
 		lang = args[2]
 	}
 
-	return Request{base, lang, url.QueryEscape(query)}
+	if len(args) > 3 {
+		result = args[3]
+	}
+
+	return Request{base, lang, url.QueryEscape(query), result}
+}
+
+func result(req Request, translation Translation) string {
+  switch req.Result {
+  case "meaning":
+    return translation.Meaning
+  case "phrase":
+    return strings.Join(translation.Phrase, ", ")
+  default:
+    return fmt.Sprintf("http://www.linguee.de%s", translation.Href)
+  }
 }
 
 func request(req Request) *iconv.Reader {
