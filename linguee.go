@@ -15,10 +15,10 @@ import (
 )
 
 type Request struct {
-	URL   string
-	Lang  string
-  Query string
-  Result string
+	URL    string
+	Lang   string
+	Query  string
+	Result string
 }
 
 type Translation struct {
@@ -28,7 +28,7 @@ type Translation struct {
 }
 
 func main() {
-	base := "http://www.linguee.de/%s/search?qe=%s&source=auto"
+	base := "http://www.linguee.com/%s/search?qe=%s&source=auto"
 
 	args := params(base, os.Args)
 
@@ -61,7 +61,7 @@ func main() {
 			Valid: true,
 			Uid:   "origin",
 			Title: origin,
-			Arg:   fmt.Sprintf("http://www.linguee.de/%s/search?source=auto&query=%s", args.Lang, url.QueryEscape(args.Query)),
+			Arg:   fmt.Sprintf("http://www.linguee.com/%s/search?source=auto&query=%s", args.Lang, url.QueryEscape(args.Query)),
 		})
 	}
 
@@ -74,8 +74,8 @@ func params(base string, args []string) Request {
 	}
 
 	query := args[1]
-  lang := "deutsch-englisch"
-  result := "url"
+	lang := "deutsch-englisch"
+	result := "url"
 
 	if len(args) > 2 {
 		lang = args[2]
@@ -89,14 +89,14 @@ func params(base string, args []string) Request {
 }
 
 func result(req Request, translation Translation) string {
-  switch req.Result {
-  case "meaning":
-    return translation.Meaning
-  case "phrase":
-    return strings.Join(translation.Phrase, ", ")
-  default:
-    return fmt.Sprintf("http://www.linguee.de%s", translation.Href)
-  }
+	switch req.Result {
+	case "meaning":
+		return translation.Meaning
+	case "phrase":
+		return strings.Join(translation.Phrase, ", ")
+	default:
+		return fmt.Sprintf("http://www.linguee.com%s", translation.Href)
+	}
 }
 
 func request(req Request) *iconv.Reader {
