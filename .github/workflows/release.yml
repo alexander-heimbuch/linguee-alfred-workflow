@@ -1,0 +1,31 @@
+ name: Release
+
+ on:
+   push:
+     tags:
+       - "v*"
+
+ jobs:
+   build:
+     runs-on: macos-latest
+     steps:
+     - uses: actions/checkout@v2
+
+     - name: Set up Go
+       uses: actions/setup-go@v2
+       with:
+         go-version: 1.16
+
+     - name: Go build
+       run: go build .
+
+     - name: Create Alfredworkflow package
+       run: zip -j linguee-de-workflow.alfredworkflow linguee info.plist icons/*
+
+     - name: Deploy release
+       uses: "marvinpinto/action-automatic-releases@latest"
+       with:
+         repo_token: "${{ secrets.GITHUB_TOKEN }}"
+         prerelease: false
+         files: |
+           *.alfredworkflow
