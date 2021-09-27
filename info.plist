@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.alfredapp.linguee</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>036C5ECC-732C-4512-8395-1628A720A18C</key>
@@ -427,10 +429,8 @@
 			<integer>40</integer>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
-	<string>0.5.1</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/alexander-heimbuch/alfred-linguee-workflow</string>
 </dict>
