@@ -3,11 +3,63 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
-	<key>category</key>
-	<string>Internet</string>
+	<string>com.alfredapp.linguee</string>
 	<key>connections</key>
 	<dict>
+		<key>036C5ECC-732C-4512-8395-1628A720A18C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5105E9C1-C44E-4940-8313-915BA5E63BBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3B304A2E-FEF0-4287-B806-F5B73B9F9A69</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5105E9C1-C44E-4940-8313-915BA5E63BBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>62198BCB-A29A-4140-B226-75D3EA3BD813</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5105E9C1-C44E-4940-8313-915BA5E63BBA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8EEF7F36-4AB0-4827-A36E-ADCB20BEDC8A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9498D8E1-8B2E-4075-9F0F-2E95E411D729</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9498D8E1-8B2E-4075-9F0F-2E95E411D729</key>
+		<array/>
 		<key>B06EFA00-BD47-48B9-BF13-A73052018A79</key>
 		<array>
 			<dict>
@@ -17,13 +69,15 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Alexander Heimbuch</string>
 	<key>description</key>
-	<string>German-English, English-German dictionary workflow for linguee.de</string>
+	<string>Linguee dictionary workflow</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -33,12 +87,20 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>36</integer>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>ling</string>
+				<string>de</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -51,7 +113,13 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;'{query}')"</string>
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-englisch</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Search linguee for "{query}"</string>
 				<key>type</key>
@@ -64,13 +132,65 @@
 			<key>uid</key>
 			<string>B06EFA00-BD47-48B9-BF13-A73052018A79</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>df</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
 				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching ...</string>
+				<key>script</key>
+				<string>export LC_ALL=de_DE.UTF-8
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-franzoesisch</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search linguee for "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>036C5ECC-732C-4512-8395-1628A720A18C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>+</string>
 				<key>url</key>
 				<string>{query}</string>
 				<key>utf8</key>
@@ -81,25 +201,237 @@
 			<key>uid</key>
 			<string>5105E9C1-C44E-4940-8313-915BA5E63BBA</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>ds</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching ...</string>
+				<key>script</key>
+				<string>export LC_ALL=de_DE.UTF-8
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-spanisch</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search linguee for "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3B304A2E-FEF0-4287-B806-F5B73B9F9A69</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>di</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching ...</string>
+				<key>script</key>
+				<string>export LC_ALL=de_DE.UTF-8
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-italienisch</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search linguee for "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>62198BCB-A29A-4140-B226-75D3EA3BD813</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9498D8E1-8B2E-4075-9F0F-2E95E411D729</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>linguee-copy-example</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>searching ...</string>
+				<key>script</key>
+				<string>export LC_ALL=de_DE.UTF-8
+./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-englisch phrase</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search linguee for "{query}" and copy it to clipboard</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8EEF7F36-4AB0-4827-A36E-ADCB20BEDC8A</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>036C5ECC-732C-4512-8395-1628A720A18C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>3B304A2E-FEF0-4287-B806-F5B73B9F9A69</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
 		<key>5105E9C1-C44E-4940-8313-915BA5E63BBA</key>
 		<dict>
+			<key>xpos</key>
+			<integer>640</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>260</integer>
+		</dict>
+		<key>62198BCB-A29A-4140-B226-75D3EA3BD813</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>480</integer>
+		</dict>
+		<key>8EEF7F36-4AB0-4827-A36E-ADCB20BEDC8A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>670</integer>
+		</dict>
+		<key>9498D8E1-8B2E-4075-9F0F-2E95E411D729</key>
+		<dict>
+			<key>xpos</key>
+			<integer>570</integer>
+			<key>ypos</key>
+			<integer>670</integer>
 		</dict>
 		<key>B06EFA00-BD47-48B9-BF13-A73052018A79</key>
 		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>40</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.5.1</string>
 	<key>webaddress</key>
-	<string>https://github.com/zusatzstoff/alfred-linguee-workflow</string>
+	<string>https://github.com/alexander-heimbuch/alfred-linguee-workflow</string>
 </dict>
 </plist>
