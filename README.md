@@ -1,6 +1,6 @@
 # Alfred Linguee.de Workflow
 
-![Screenshot](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/screenshot.png)
+![Screenshot](screenshot.png)
 
 *Functionality*
 
@@ -11,7 +11,7 @@
 
 ## Download
 
-[![Download](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/workflow-icon.png)](https://raw.github.com/zusatzstoff/linguee-alfred-workflow/master/linguee-de-workflow.alfredworkflow)
+The latest version of this workflow can be downloaded from [GitHub releases](https://github.com/burneyy/linguee-alfred-workflow/releases).
 
 ## Extended Use Cases
 
