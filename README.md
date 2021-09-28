@@ -11,7 +11,7 @@
 
 ## Download
 
-The latest version of this workflow can be downloaded from [GitHub releases](https://github.com/burneyy/linguee-alfred-workflow/releases).
+The latest version of this workflow can be downloaded from [GitHub releases](https://github.com/alexander-heimbuch/linguee-alfred-workflow/releases).
 
 ## Extended Use Cases
 
