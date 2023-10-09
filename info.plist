@@ -115,7 +115,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-englisch</string>
+./linguee "$(iconv -f UTF8-MAC -t UTF-8 &lt;&lt;&lt;"{query}")" deutsch-englisch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -165,7 +165,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-franzoesisch</string>
+./linguee "$(iconv -f UTF8-MAC -t UTF-8 &lt;&lt;&lt;"{query}")" deutsch-franzoesisch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -234,7 +234,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-spanisch</string>
+./linguee "$(iconv -f UTF8-MAC -t UTF-8 &lt;&lt;&lt;"{query}")" deutsch-spanisch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -284,7 +284,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-italienisch</string>
+./linguee "$(iconv -f UTF8-MAC -t UTF-8 &lt;&lt;&lt;"{query}")" deutsch-italienisch</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -353,7 +353,7 @@
 				<string>searching ...</string>
 				<key>script</key>
 				<string>export LC_ALL=de_DE.UTF-8
-./linguee "$(iconv -f UTF8-MAC &lt;&lt;&lt;"{query}")" deutsch-englisch phrase</string>
+./linguee "$(iconv -f UTF8-MAC -t UTF-8 &lt;&lt;&lt;"{query}")" deutsch-englisch phrase</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
