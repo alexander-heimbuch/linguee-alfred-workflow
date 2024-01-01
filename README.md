@@ -1,3 +1,5 @@
+> This repository is not maintained anymore, I can highly recommend [Linguee-Workflow-for-Alfred](https://github.com/sigito/Linguee-Workflow-for-Alfred) as a modern successor.
+
 # Alfred Linguee.de Workflow
 
 ![Screenshot](screenshot.png)
